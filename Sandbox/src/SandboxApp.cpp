@@ -2,6 +2,7 @@
 
 class Sandbox : public Liquid::Application
 {
+
 public:
 	Sandbox() 
 	{

@@ -7,6 +7,7 @@ namespace Liquid {
 
 	class LIQUID_API Log
 	{
+
 	public:
 		static void Init();
 
@@ -16,6 +17,7 @@ namespace Liquid {
 	private:
 		static std::shared_ptr<spdlog::logger> s_CoreLogger;
 		static std::shared_ptr<spdlog::logger> s_ClientLogger;
+
 	};
 
 }
