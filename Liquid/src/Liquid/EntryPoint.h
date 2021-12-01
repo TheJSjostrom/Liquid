@@ -6,7 +6,7 @@ extern Liquid::Application* Liquid::CreateApplication();
 
 int main(int argc, char** argv)
 {
-
+	 
 	Liquid::Log::Init();
 	LQ_CORE_WARN("Initialized Log!");
 	int a = 2;

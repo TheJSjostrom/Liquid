@@ -7,7 +7,7 @@ namespace Liquid {
 
 	class LIQUID_API Log
 	{
-
+	
 	public:
 		static void Init();
 

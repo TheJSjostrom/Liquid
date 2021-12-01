@@ -11,7 +11,7 @@ namespace Liquid {
 	{
 
 	}
-
+	 
 	void Application::Run() 
 	{
 		while (true);
