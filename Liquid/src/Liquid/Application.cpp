@@ -1,5 +1,8 @@
 #include "Application.h"
 
+#include "Liquid/Events/ApplicationEvent.h"
+#include "Liquid/Log.h"
+
 namespace Liquid {
 
 	Application::Application() 
@@ -14,7 +17,8 @@ namespace Liquid {
 	 
 	void Application::Run() 
 	{
-		while (true);
+		WindowResizeEvent e(1200, 720);
+		LQ_TRACE(e);
 	}
 
 }
