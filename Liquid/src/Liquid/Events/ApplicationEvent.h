@@ -6,6 +6,7 @@
 
 namespace Liquid {
 	
+	// WindowResizeEvent class
 	class LIQUID_API WindowResizeEvent : public Event
 	{
 	public:
@@ -28,6 +29,7 @@ namespace Liquid {
 		unsigned int m_Width, m_Height;
 	};
 
+	// WindowCloseEvent class
 	class LIQUID_API WindowCloseEvent : public Event
 	{
 	public:
@@ -37,6 +39,7 @@ namespace Liquid {
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};
 
+	// AppTicketEvent class
 	class LIQUID_API AppTickEvent : public Event
 	{
 	public:
@@ -46,6 +49,7 @@ namespace Liquid {
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};
 
+	// AppUpdateEvent class
 	class LIQUID_API AppUpdateEvent : public Event
 	{
 	public:
@@ -55,6 +59,7 @@ namespace Liquid {
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};
 
+	// AppRenderEvent class
 	class LIQUID_API AppRenderEvent : public Event
 	{
 	public:

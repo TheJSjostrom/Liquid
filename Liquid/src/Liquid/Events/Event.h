@@ -32,6 +32,7 @@ namespace Liquid {
 
 #define  EVENT_CLASS_CATEGORY(category) virtual int GetCategoryFlags() const override { return category; }
 
+	// Event class
 	class LIQUID_API Event
 	{
 		friend class EventDispatcher;
@@ -49,6 +50,7 @@ namespace Liquid {
 		bool m_Handled = false;
 	};
 
+	// EventDispatcher class
 	class EventDispatcher
 	{
 		template<typename T>

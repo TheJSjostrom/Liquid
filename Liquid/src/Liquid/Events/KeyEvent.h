@@ -6,6 +6,7 @@
 
 namespace Liquid {
 
+	// KeyEvent class
 	class LIQUID_API KeyEvent : public Event
 	{
 	public:
@@ -19,13 +20,14 @@ namespace Liquid {
 		int m_KeyCode;
 	};
 
+	// KeyPressedEvent class
 	class LIQUID_API KeyPressedEvent : public KeyEvent
 	{
 	public: 
 		KeyPressedEvent(int keycode, int repeatCount)
-			: KeyEvent(keycode), m_repeatCount(repeatCount) {}
+			: KeyEvent(keycode), m_RepeatCount(repeatCount) {}
 
-		inline int GetRepeatCount() const { return m_repeatCount; }
+		inline int GetRepeatCount() const { return m_RepeatCount; }
 
 		std::string ToString() const override
 		{
@@ -39,6 +41,7 @@ namespace Liquid {
 		int m_RepeatCount;
 	};
 	
+	// KeyReleasedEvent class
 	class LIQUID_API KeyReleasedEvent : public KeyEvent
 	{
 	public:

@@ -6,6 +6,7 @@
 
 namespace Liquid {
 	
+	// MouseMovedEvent class
 	class LIQUID_API MouseMovedEvent : public Event
 	{
 	public:
@@ -18,7 +19,7 @@ namespace Liquid {
 		std::string ToString() const override
 		{
 			std::stringstream ss;
-			ss << "MouseMovedEvent: " < m_MouseX << ", " << m_MouseY;
+			ss << "MouseMovedEvent: " << m_MouseX << ", " << m_MouseY;
 			return ss.str();
 		}
 
@@ -29,6 +30,7 @@ namespace Liquid {
 		float m_MouseX, m_MouseY; 
 	};
 
+	// MouseScrolledEvent class
 	class LIQUID_API MouseScrolledEvent : public Event
 	{
 	public:
@@ -41,7 +43,7 @@ namespace Liquid {
 		std::string ToString() const override
 		{
 			std::stringstream ss;
-			ss << "MouseScrolledEvent: " < GetXOffset() << ", " << GetYOffset();
+			ss << "MouseScrolledEvent: " << GetXOffset() << ", " << GetYOffset();
 			return ss.str();
 		}
 
@@ -52,6 +54,7 @@ namespace Liquid {
 		float m_XOffset, m_YOffset;
 	};
 
+	// MouseButtonEvent class
 	class LIQUID_API MouseButtonEvent : public Event
 	{
 	public:
@@ -62,9 +65,10 @@ namespace Liquid {
 		MouseButtonEvent(int button)
 			: m_Button(button) {}
 
-		int m_button
+		int m_Button;
 	};
 
+	// MouseButtonPressedEvent class
 	class LIQUID_API MouseButtonPressedEvent : public MouseButtonEvent
 	{
 	public:
@@ -81,6 +85,7 @@ namespace Liquid {
 		EVENT_CLASS_TYPE(MouseButtonPressed)
 	};
 
+	// MouseButtonReleasedEvent class
 	class LIQUID_API MouseButtonReleasedEvent : public MouseButtonEvent
 	{
 	public:
