@@ -18,6 +18,9 @@ project "Liquid"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "lqpch.h"
+	pchsource "Liquid/src/lqpch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",

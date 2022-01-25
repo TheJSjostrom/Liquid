@@ -1,3 +1,4 @@
+#include "lqpch.h"
 #include "Application.h"
 
 #include "Liquid/Events/ApplicationEvent.h"

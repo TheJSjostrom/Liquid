@@ -1,9 +1,6 @@
 #pragma once
-
+#include "lqpch.h"
 #include "Liquid/Core.h"
-
-#include <string>
-#include <functional>
 
 namespace Liquid {
 
