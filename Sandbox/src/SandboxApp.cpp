@@ -1,4 +1,3 @@
- 
 #include <Liquid.h>
  
 class Sandbox : public Liquid::Application
