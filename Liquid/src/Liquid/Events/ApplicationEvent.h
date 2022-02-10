@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Event.h"
-
+ 
 namespace Liquid {
 	
 	// WindowResizeEvent class
