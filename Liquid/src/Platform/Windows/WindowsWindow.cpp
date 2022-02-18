@@ -5,7 +5,7 @@ namespace Liquid {
 
 	static bool s_GLFWInitialized = false;
 
-	Window* Window::Create(const WindowProps& props)
+	Window* Window::Create(WindowProps& props)
 	{
 		return new WindowsWindow(props);
 	}
