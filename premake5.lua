@@ -43,7 +43,9 @@ project "Liquid"
 	links
 	{
 		"GLFW",
-		"opengl32.lib"
+		"opengl32.lib",
+		"Dwmapi.lib"
+		
 	}
 
 	filter "system:windows"
