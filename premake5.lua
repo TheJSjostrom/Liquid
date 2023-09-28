@@ -45,7 +45,7 @@ project "Liquid"
 		"GLFW",
 		"opengl32.lib",
 		"Dwmapi.lib"
-		
+
 	}
 
 	filter "system:windows"
@@ -66,14 +66,17 @@ project "Liquid"
 
 	filter "configurations:Debug"
 		defines "LQ_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "LQ_RELEASE"
+		buildoptions "/MDd"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "LQ_Dist"
+		buildoptions "/MDd"
 		symbols "On"
 
 
@@ -114,14 +117,18 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "LQ_DEBUG"
+		buildoptions"/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "LQ_RELEASE"
+		buildoptions "/MDd"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "LQ_DIST"
+		buildoptions "/MDd"
 		symbols "On"
+		
 
  
