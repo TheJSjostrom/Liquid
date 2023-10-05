@@ -1,7 +1,6 @@
 #pragma once
-
-#include "Core.h"
 #include "spdlog/spdlog.h"
+#include "Core.h"
 #include "spdlog/fmt/ostr.h"
 
 namespace Liquid {
@@ -23,17 +22,15 @@ namespace Liquid {
 }
 
 // Core log macros
-#define LQ_CORE_TRACE(...)  ::Liquid::Log::GetCoreLogger()->trace(__VA_ARGS__)
-#define LQ_CORE_INFO(...)   ::Liquid::Log::GetCoreLogger()->info(__VA_ARGS__)
-#define LQ_CORE_WARN(...)   ::Liquid::Log::GetCoreLogger()->warn(__VA_ARGS__)
-#define LQ_CORE_ERROR(...)  ::Liquid::Log::GetCoreLogger()->error(__VA_ARGS__)
-#define LQ_CORE_WARN(...)   ::Liquid::Log::GetCoreLogger()->warn(__VA_ARGS__)
-#define LQ_CORE_FATAL(...)  ::Liquid::Log::GetCoreLogger()->fatal(__VA_ARGS__) 
+#define LQ_CORE_TRACE(...)   ::Liquid::Log::GetCoreLogger()->trace(__VA_ARGS__)
+#define LQ_CORE_INFO(...)    ::Liquid::Log::GetCoreLogger()->info(__VA_ARGS__)
+#define LQ_CORE_WARN(...)    ::Liquid::Log::GetCoreLogger()->warn(__VA_ARGS__)
+#define LQ_CORE_ERROR(...)   ::Liquid::Log::GetCoreLogger()->error(__VA_ARGS__)
+#define LQ_CORE_FATAL(...)   ::Liquid::Log::GetCoreLogger()->fatal(__VA_ARGS__)
  
 // Client log macros
-#define LQ_TRACE(...)       ::Liquid::Log::GetClientLogger()->trace(__VA_ARGS__)
-#define LQ_INFO(...)        ::Liquid::Log::GetClientLogger()->info(__VA_ARGS__)
-#define LQ_WARN(...)        ::Liquid::Log::GetClientLogger()->warn(__VA_ARGS__)
-#define LQ_ERROR(...)       ::Liquid::Log::GetClientLogger()->error(__VA_ARGS__)
-#define LQ_WARN(...)        ::Liquid::Log::GetClientLogger()->warn(__VA_ARGS__)
-#define LQ_FATAL(...)       ::Liquid::Log::GetClientLogger()->fatal(__VA_ARGS__)
+#define LQ_TRACE(...)        ::Liquid::Log::GetClientLogger()->trace(__VA_ARGS__)
+#define LQ_INFO(...)         ::Liquid::Log::GetClientLogger()->info(__VA_ARGS__)
+#define LQ_WARN(...)         ::Liquid::Log::GetClientLogger()->warn(__VA_ARGS__)
+#define LQ_ERROR(...)        ::Liquid::Log::GetClientLogger()->error(__VA_ARGS__)
+#define LQ_FATAL(...)        ::Liquid::Log::GetClientLogger()->fatal(__VA_ARGS__)

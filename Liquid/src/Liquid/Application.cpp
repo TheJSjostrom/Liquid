@@ -3,8 +3,7 @@
 
 #include "Liquid/Log.h"
 
-#include "GLFW/glfw3.h"
-
+#include <glad/glad.h>
 namespace Liquid {
 
 #define BIND_EVENT_FN(x) std::bind(&Application::x, this, std::placeholders::_1)
@@ -12,8 +11,7 @@ namespace Liquid {
 	Application::Application() 
 	{
 		m_Window = std::unique_ptr<Window>(Window::Create());
-		m_Window->SetEventCallback(BIND_EVENT_FN(OnEvent));
-		 
+		m_Window->SetEventCallback(BIND_EVENT_FN(OnEvent));	 
 	}
 
 	Application::~Application() 
@@ -36,20 +34,24 @@ namespace Liquid {
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(OnWindowClose));
 
-		LQ_CORE_TRACE("{0}", e);
-
-		for (auto it = m_LayerStack.end(); it != m_LayerStack.begin(); ) 
+		LQ_CORE_TRACE("{1}", e);
+		
+		for (auto it = m_LayerStack.end(); it != m_LayerStack.begin(); )
 		{
 			(*--it)->OnEvent(e);
 			if (e.Handled)
 				break;
 		}
+		
 	}
 
 	void Application::Run() 
 	{
 		while (m_Running)
 		{
+			glClearColor(0, 0, 0.25, 1);
+			glClear(GL_COLOR_BUFFER_BIT);
+
 			for (Layer* layer : m_LayerStack)
 				layer->OnUpdate();
 

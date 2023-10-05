@@ -13,8 +13,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (Solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "Liquid/vendor/GLFW/include"
+IncludeDir["Glad"] = "Liquid/vendor/Glad/include"
 
 include "Liquid/vendor/GLFW"
+include "Liquid/vendor/Glad"
 
 project "Liquid"
 	location "Liquid"
@@ -37,15 +39,16 @@ project "Liquid"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links
 	{
 		"GLFW",
+		"Glad",
 		"opengl32.lib",
 		"Dwmapi.lib"
-
 	}
 
 	filter "system:windows"
@@ -56,7 +59,8 @@ project "Liquid"
 		defines
 		{
 			"LQ_PLATFORM_WINDOWS",
-			"LQ_BUILD_DLL"
+			"LQ_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands

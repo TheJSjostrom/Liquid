@@ -7,8 +7,6 @@
 #include "Liquid/Events/Event.h"
 #include "Liquid/Events/ApplicationEvent.h"
 
-
-
 namespace Liquid {
 
 	class LIQUID_API Application
