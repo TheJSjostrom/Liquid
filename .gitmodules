@@ -4,3 +4,6 @@
 [submodule "Liquid/vendor/GLFW"]
 	path = Liquid/vendor/GLFW
 	url = https://github.com/TheCherno/GLFW
+[submodule "Liquid/vendor/imgui"]
+	path = Liquid/vendor/imgui
+	url = https://github.com/TheCherno/imgui
