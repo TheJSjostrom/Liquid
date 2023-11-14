@@ -17,6 +17,7 @@ public:
 
 	void OnEvent(Liquid::Event& event) override
 	{
+
 		LQ_TRACE("{0}", event);
 	}
 
@@ -29,7 +30,7 @@ class Sandbox : public Liquid::Application
 public:
 	Sandbox() 
 	{
-		PushLayer(new ExampleLayer());
+		//PushLayer(new ExampleLayer());
 		PushOverlay(new Liquid::ImGuiLayer);
 	}
 
