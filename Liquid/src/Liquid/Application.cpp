@@ -28,18 +28,20 @@ namespace Liquid {
 	void Application::PushLayer(Layer* layer) 
 	{
 		m_LayerStack.PushLayer(layer);
+		layer->OnAttach();
 	}
 
 	void Application::PushOverlay(Layer* overlay)
 	{
 		m_LayerStack.PushOverlay(overlay);
+		overlay->OnAttach();
 	}
 
 	void Application::OnEvent(Event& e)
 	{
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(OnWindowClose));
-		 
+		
 
 		for (auto it = m_LayerStack.end(); it != m_LayerStack.begin(); )
 		{
